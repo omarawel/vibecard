@@ -1,0 +1,41 @@
+import { Style } from "./LargeEditor";
+interface Props {
+    orientation: boolean;
+    active: string;
+    activeCard: (value: string) => void;
+    setSwitch: (value: boolean) => void;
+    bg: string;
+    pickedBg: string;
+    switchBtn: boolean;
+    image: string;
+    croppedImage: string;
+    name: string;
+    fontStyle: {
+        style: string;
+    };
+    fSize: string;
+    textColor: string;
+    extraText: string;
+    extraFontStyle: Style;
+    extraFontsize: string;
+    extraTextColor: string;
+    setBg: (value: string) => void;
+    setPickBg: (value: string) => void;
+    backBg: string;
+    pickedBackBg: string;
+    backImage: string;
+    backName: string;
+    backPickedBg: string;
+    backCroppedImage: string;
+    backFontStyle: Style;
+    backFontSize: string;
+    backTextColor: string;
+    backExtraText: string;
+    backExtraFontStyle: Style;
+    backExtraFontsize: string;
+    backExtraTextColor: string;
+    setBackBg: (value: string) => void;
+    setBackPickBg: (value: string) => void;
+}
+declare const LargeCardPreview: ({ orientation, active, switchBtn, activeCard, setPickBg, bg, name, image, fSize, textColor, fontStyle, pickedBg, croppedImage, extraText, extraFontsize, extraFontStyle, extraTextColor, setBg, setSwitch, backBg, pickedBackBg, backName, backImage, backFontSize, backTextColor, backExtraFontStyle, backCroppedImage, backExtraText, backExtraFontsize, backExtraTextColor, backFontStyle, setBackBg, setBackPickBg, }: Props) => import("react/jsx-runtime").JSX.Element;
+export default LargeCardPreview;

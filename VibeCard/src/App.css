@@ -1,14 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@600;800&family=Russo+One&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 /* Logo */
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&");
+
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 
 body {
-  background-color: #0d1224;
-  font-family: "Roboto", sans-serif;
+  background-color: #090c18;
+}
+
+.font-poppins {
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
@@ -17,17 +18,12 @@ option {
   background-color: #0d1224;
 }
 
-/* header {
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(50px);
-} */
-
 .nav-bg {
   background-color: transparent;
 }
 
 .main-bg {
-  background-color: #0d1224 !important;
+  background-color: #090c18 !important;
 }
 
 .btn-bg {
@@ -57,6 +53,10 @@ option {
   background-color: #12172a;
 }
 
+.bg2 {
+  background-color: #1c2136;
+}
+
 h1,
 h2,
 h3,
@@ -64,14 +64,10 @@ h4,
 h5,
 h6 {
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
 }
 
 .font-poppins {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .logo-font {
@@ -104,17 +100,7 @@ option {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #001047;
-}
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type="number"] {
-  -moz-appearance: textfield;
+  background: #0c2686;
 }
 
 .text-shadow {
@@ -182,14 +168,6 @@ input[type="number"] {
   }
 }
 
-.watermark-effect {
-  background: rgba(29, 29, 29, 0.223);
-  box-shadow: 0 4px 30px rgba(70, 69, 69, 0);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border-radius: 10px !important;
-}
-
 .glass-effect {
   background: rgba(254, 254, 255, 0);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0);
@@ -207,7 +185,7 @@ input[type="number"] {
   right: 0;
   bottom: 0;
   z-index: 0;
-  background-color: rgba(0, 0, 0, 0.63);
+  background-color: rgba(0, 0, 0, 0.628);
 }
 
 /* Spinner */
@@ -289,141 +267,4 @@ input[type="number"] {
       #12172a
     )
     10;
-}
-
-/* Small Editor Scrollbar */
-.scroll-thumb {
-  animation: animation 3s infinite;
-}
-
-@keyframes animation {
-  0% {
-    margin-top: 0;
-    opacity: 0;
-  }
-  5% {
-    margin-top: 10px;
-    opacity: 1;
-  }
-  25% {
-    opacity: 1;
-  }
-  50% {
-    margin-top: 24px;
-    opacity: 0;
-  }
-  75% {
-    margin-top: 10px;
-    opacity: 1;
-  }
-  100% {
-    margin-top: 0;
-    opacity: 0;
-  }
-}
-
-.sm-scroll {
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch; /* Enable momentum scrolling on iOS */
-  /* height: 320px; */
-}
-
-.sm-scrollbar::-webkit-scrollbar {
-  width: 20px;
-}
-
-.sm-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #fff;
-  border-radius: 5px;
-}
-
-.sm-scrollbar::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
-}
-
-.no-select {
-  user-select: none !important;
-}
-
-.watermark {
-  width: 65px;
-}
-
-/* Switch */
-/* From Uiverse.io by ClawHack1 */
-/* Genel stil */
-.toggle-switch {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 24px;
-  margin: 10px;
-  margin-top: 0 !important;
-}
-
-/* Giriş stil */
-.toggle-switch .toggle-input {
-  display: none;
-}
-
-/* Anahtarın stilinin etrafındaki etiketin stil */
-.toggle-switch .toggle-label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 18px;
-  background-color: #2196f3;
-  border-radius: 34px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-/* Anahtarın yuvarlak kısmının stil */
-.toggle-switch .toggle-label::before {
-  content: "";
-  position: absolute;
-  width: 15px;
-  height: 14px;
-  border-radius: 50%;
-  top: 2px;
-  left: 2px;
-  background-color: #fff;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s;
-}
-
-/* Anahtarın etkin hale gelmesindeki stil değişiklikleri */
-.toggle-switch .toggle-input:checked + .toggle-label {
-  background-color: #4caf50;
-}
-
-.toggle-switch .toggle-input:checked + .toggle-label::before {
-  transform: translateX(16px);
-}
-
-/* Light tema */
-.toggle-switch.light .toggle-label {
-  background-color: #bebebe;
-}
-
-.toggle-switch.light .toggle-input:checked + .toggle-label {
-  background-color: #9b9b9b;
-}
-
-.toggle-switch.light .toggle-input:checked + .toggle-label::before {
-  transform: translateX(6px);
-}
-
-/* Dark tema */
-.toggle-switch.dark .toggle-label {
-  background-color: #4b4b4b;
-}
-
-.toggle-switch.dark .toggle-input:checked + .toggle-label {
-  background-color: #717171;
-}
-
-.toggle-switch.dark .toggle-input:checked + .toggle-label::before {
-  transform: translateX(16px);
 }

@@ -1,9 +1,10 @@
+// ProtectedComponent.tsx
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import useAuthStore from "../../store/useUserData";
 import axios from "axios";
 import { baseUrl } from "../../services/request";
 import Loading from "../Loading/Loading";
+import useAuth from "@/store/useAuth";
 
 interface ProtectedProps {
   children: React.ReactNode;
@@ -11,19 +12,19 @@ interface ProtectedProps {
 
 const Protected = ({ children }: ProtectedProps) => {
   const navigate = useNavigate();
-  const { login } = useAuthStore();
+  const { login } = useAuth();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios
-      .get(`${baseUrl}/api/v1/auth/me`, {
+      .get(`${baseUrl}/api/v1/dashboard/me`, {
         headers: {
           "Content-Type": "application/json",
         },
         withCredentials: true,
       })
       .then((response) => {
-        login(response.data.username, response.data.email, response.data.plan);
+        login(response.data.email, response.data.type);
         setLoading(false);
       })
       .catch(() => {

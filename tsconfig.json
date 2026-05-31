@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2016",
+    "module": "CommonJS",
+    "lib": ["ES2016", "DOM"],
+    "declaration": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "jsx": "react-jsx",
+    "baseUrl": "./",
+    "paths": {
+      "@/components/*": ["VibeCard/src/components/*"],
+      "@/assets/*": ["VibeCard/src/assets/*"],
+      "@/hooks/*": ["VibeCard/src/hooks/*"],
+      "@/lib/*": ["VibeCard/src/lib/*"],
+      "@/services/*": ["VibeCard/src/services/*"],
+      "@/store/*": ["VibeCard/src/store/*"],
+      "@/locales/*": ["VibeCard/src/locales/*"]
+    },
+    "resolveJsonModule": true
+  },
+  "include": ["VibeCard/src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

@@ -14,7 +14,7 @@ const Button = ({ label, loader }: Props) => {
           <Loader />
         </div>
       ) : (
-        <button className="btn-bg text-white w-full py-3 rounded font-poppins mt-5 shadow-lg">
+        <button className="btn-bg w-full py-3 rounded font-poppins mt-5 shadow-lg">
           {label}
         </button>
       )}
